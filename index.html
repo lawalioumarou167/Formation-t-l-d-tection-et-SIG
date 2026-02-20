@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cabinetnilab - Formation SIG & Télédétection</title>
+
+<style>
+body {
+margin:0;
+font-family:Arial, sans-serif;
+background:#f4f9f4;
+}
+
+/* HEADER */
+header {
+background:#0a7f3f;
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+
+/* LOGO */
+.logo {
+width:200px;
+margin-bottom:15px;
+animation: fadeIn 2s ease-in-out;
+}
+
+/* Animation logo */
+@keyframes fadeIn {
+from { opacity:0; transform:translateY(-20px); }
+to { opacity:1; transform:translateY(0); }
+}
+
+section {
+padding:40px 20px;
+max-width:1000px;
+margin:auto;
+}
+
+h2 {
+color:#0a7f3f;
+text-align:center;
+}
+
+.card {
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+margin-bottom:20px;
+}
+
+input, select, textarea {
+width:100%;
+padding:10px;
+margin-top:10px;
+margin-bottom:15px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+button {
+background:#0a7f3f;
+color:white;
+padding:12px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+width:100%;
+font-size:16px;
+}
+
+button:hover {
+background:#06632f;
+}
+
+.success {
+color:green;
+font-weight:bold;
+display:none;
+margin-top:15px;
+text-align:center;
+}
+
+footer {
+background:#0a7f3f;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="Logo.png" alt="Logo Cabinetnilab" class="logo">
+<h1>Cabinetnilab</h1>
+<p>Formation Professionnelle en SIG & Télédétection</p>
+<p><strong>Lieu :</strong> Niamey</p>
+</header>
+
+<section>
+<h2>TERMES DE RÉFÉRENCE (TDR)</h2>
+
+<div class="card">
+<h3>1. Présentation</h3>
+<p>Cabinetnilab est une structure spécialisée dans la formation en géomatique, systèmes d’information géographique (SIG) et télédétection. Elle vise à renforcer les capacités des étudiants, professionnels et organisations à Niamey.</p>
+</div>
+
+<div class="card">
+<h3>2. Contexte & Justification</h3>
+<p>Avec l’importance croissante des données géospatiales et satellitaires dans la prise de décision, il est essentiel de développer des compétences pratiques en analyse spatiale et cartographie.</p>
+</div>
+
+<div class="card">
+<h3>3. Objectif Général</h3>
+<p>Permettre aux participants de maîtriser les fondamentaux des SIG et de produire des analyses cartographiques professionnelles.</p>
+</div>
+
+<div class="card">
+<h3>4. Public Cible</h3>
+<ul>
+<li>Étudiants en géographie, environnement, géomatique</li>
+<li>Professionnels et agents techniques</li>
+<li>ONG et collectivités</li>
+<li>Toute personne intéressée par les SIG</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>5. Durée & Modalités</h3>
+<ul>
+<li>Durée : 1 mois</li>
+<li>Rythme : 2 heures par semaine</li>
+<li>Mode : Présentiel (Niamey) ou En ligne</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>6. Programme</h3>
+<ul>
+<li>Introduction aux SIG</li>
+<li>Cartographie & projections</li>
+<li>QGIS & ArcGIS</li>
+<li>KoboToolbox</li>
+<li>Introduction à la télédétection</li>
+<li>Google Earth Engine</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>7. Évaluation & Attestation</h3>
+<p>L’évaluation se fera par des exercices pratiques et un mini-projet final. Une attestation de formation sera délivrée à chaque participant.</p>
+</div>
+
+<div class="card">
+<h3>8. Coût de la Formation</h3>
+<ul>
+<li>Frais d’inscription : 1 000 FCFA</li>
+<li>Frais de formation : 30 000 FCFA / mois</li>
+</ul>
+</div>
+
+</section>
+
+<section>
+<h2>Inscription</h2>
+
+<form id="inscriptionForm" action="https://formspree.io/f/mqeddeow" method="POST">
+<input type="text" name="Nom" id="nom" placeholder="Nom complet" required>
+<input type="email" name="Email" id="email" placeholder="Email" required>
+<input type="text" name="Téléphone" id="telephone" placeholder="Téléphone" required>
+
+<select name="Mode" id="mode" required>
+<option value="">Mode de formation</option>
+<option>Présentiel - Niamey</option>
+<option>En ligne</option>
+</select>
+
+<textarea name="Message" id="message" placeholder="Votre message"></textarea>
+
+<button type="submit">S'inscrire</button>
+</form>
+
+<p class="success" id="successMessage">
+Inscription envoyée avec succès ! Nous vous contacterons rapidement.
+</p>
+
+</section>
+
+<footer>
+<p>Email : oumaroul@yahoo.fr | WhatsApp : 97 04 61 46</p>
+<p>© 2026 Cabinetnilab - Niamey</p>
+</footer>
+
+<script>
+document.getElementById("inscriptionForm").addEventListener("submit", function(event) {
+
+let nom = document.getElementById("nom").value;
+let email = document.getElementById("email").value;
+let telephone = document.getElementById("telephone").value;
+let mode = document.getElementById("mode").value;
+let message = document.getElementById("message").value;
+
+let texte = `Nouvelle inscription Cabinetnilab:
+Nom: ${nom}
+Email: ${email}
+Téléphone: ${telephone}
+Mode: ${mode}
+Message: ${message}`;
+
+let url = "https://wa.me/22797046146?text=" + encodeURIComponent(texte);
+
+setTimeout(function() {
+window.open(url, "_blank");
+}, 1000);
+
+document.getElementById("successMessage").style.display = "block";
+
+});
+</script>
+
+</body>
+</html>
