@@ -4,190 +4,90 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cabinetnilab - Formation SIG & Télédétection</title>
-
 <style>
-body {
-margin:0;
-font-family:Arial, sans-serif;
-background:#f4f9f4;
-}
-
-/* HEADER */
-header {
-background:#0a7f3f;
-color:white;
-text-align:center;
-padding:40px 20px;
-}
-
-/* LOGO */
-.logo {
-width:200px;
-margin-bottom:15px;
-animation: fadeIn 2s ease-in-out;
-}
-
-/* Animation logo */
-@keyframes fadeIn {
-from { opacity:0; transform:translateY(-20px); }
-to { opacity:1; transform:translateY(0); }
-}
-
-section {
-padding:40px 20px;
-max-width:1000px;
-margin:auto;
-}
-
-h2 {
-color:#0a7f3f;
-text-align:center;
-}
-
-.card {
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
-margin-bottom:20px;
-}
-
-input, select, textarea {
-width:100%;
-padding:10px;
-margin-top:10px;
-margin-bottom:15px;
-border-radius:5px;
-border:1px solid #ccc;
-}
-
-button {
-background:#0a7f3f;
-color:white;
-padding:12px;
-border:none;
-border-radius:5px;
-cursor:pointer;
-width:100%;
-font-size:16px;
-}
-
-button:hover {
-background:#06632f;
-}
-
-.success {
-color:green;
-font-weight:bold;
-display:none;
-margin-top:15px;
-text-align:center;
-}
-
-footer {
-background:#0a7f3f;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:40px;
-}
+body{ margin:0; font-family:Arial,sans-serif; background:#f4f9f4; scroll-behavior:smooth;}
+header{ background:linear-gradient(135deg,#0a7f3f,#06632f); color:white; text-align:center; padding:60px 20px;}
+.logo{ width:160px; margin-bottom:15px; animation:float 3s ease-in-out infinite;}
+@keyframes float{0%{transform:translateY(0);}50%{transform:translateY(-10px);}100%{transform:translateY(0);}}
+section{ padding:60px 20px; max-width:950px; margin:auto;}
+h2, h3{ color:#0a7f3f; text-align:center; margin-bottom:30px;}
+.countdown{ font-size:28px; font-weight:bold; color:#0a7f3f; text-align:center; margin:20px 0;}
+.reserve-btn{ display:block; margin:20px auto; background:#0a7f3f; color:white; padding:15px 30px; border:none; border-radius:8px; cursor:pointer;}
+input,select,textarea{ width:100%; padding:12px; margin-top:10px; margin-bottom:15px; border-radius:6px; border:1px solid #ccc;}
+button{ background:#0a7f3f; color:white; padding:14px; border:none; border-radius:6px; cursor:pointer; width:100%; font-size:16px;}
+.success{ color:green; text-align:center; display:none; margin-top:15px; font-weight:bold;}
+footer{ background:#0a7f3f; color:white; text-align:center; padding:20px; margin-top:40px;}
+ul.programme{ list-style-type: disc; padding-left: 40px; text-align:left; max-width:600px; margin:auto; }
+ul.programme li{ margin-bottom:10px; font-size:16px;}
+.cout{ text-align:center; font-size:18px; margin-bottom:30px;}
 </style>
 </head>
-
 <body>
 
 <header>
-<img src="Logo.png" alt="Logo Cabinetnilab" class="logo">
+<img src="Logo.png" class="logo" alt="Logo Cabinetnilab">
 <h1>Cabinetnilab</h1>
 <p>Formation Professionnelle en SIG & Télédétection</p>
 <p><strong>Lieu :</strong> Niamey</p>
 </header>
 
 <section>
-<h2>TERMES DE RÉFÉRENCE (TDR)</h2>
+<h2>Début de la formation le 4 avril 2026</h2>
+<h2>Heure : 20h30 à 22h30</h2>
+<div class="countdown" id="countdown"></div>
+<button class="reserve-btn" onclick="document.getElementById('programme').scrollIntoView();">Voir le programme</button>
+</section>
 
-<div class="card">
-<h3>1. Présentation</h3>
-<p>Cabinetnilab est une structure spécialisée dans la formation en géomatique, systèmes d’information géographique (SIG) et télédétection. Elle vise à renforcer les capacités des étudiants, professionnels et organisations au Niger.</p>
+<!-- ================= Programme / TDR ================= -->
+<section id="programme">
+
+<h2>Programme de la formation</h2>
+
+<div class="cout">
+<strong>Frais d'inscription : 2000 FCFA</strong>
 </div>
 
-<div class="card">
-<h3>2. Contexte & Justification</h3>
-<p>Avec l’importance croissante des données géospatiales et satellitaires dans la prise de décision, il est essentiel de développer des compétences pratiques en analyse spatiale et cartographie.</p>
-</div>
+<h3>Programme</h3>
 
-<div class="card">
-<h3>3. Objectif Général</h3>
-<p>Permettre aux participants de maîtriser les fondamentaux des SIG et de produire des analyses cartographiques professionnelles.</p>
-</div>
-
-<div class="card">
-<h3>4. Public Cible</h3>
-<ul>
-<li>Étudiants en géographie, environnement, géomatique</li>
-<li>Professionnels et agents techniques</li>
-<li>ONG et collectivités</li>
-<li>Toute personne intéressée par les SIG</li>
+<ul class="programme">
+<li>Introduction aux SIG et télédétection</li>
+<li>Prise en main de QGIS & ArcGIS</li>
+<li>Géoréférencement et digitalisation</li>
+<li>Outils d'Analyse spatiale avec QGIS et Arcgis</li>
+<li>Prise en main de la plateforme KoboToolbox</li>
+<li>Se familiariser avec Google Earth Pro</li>
 </ul>
-</div>
 
-<div class="card">
-<h3>5. Durée & Modalités</h3>
-<ul>
-<li>Durée : 1 mois</li>
-<li>Rythme : 2 heures par semaine</li>
-<li>Mode : Présentiel (Niamey) ou En ligne</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>6. Programme</h3>
-<ul>
-<li>Introduction aux SIG</li>
-<li>Cartographie & projections</li>
-<li>QGIS & ArcGIS</li>
-<li>KoboToolbox</li>
-<li>Introduction à la télédétection</li>
-<li>Google Earth Engine</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>7. Évaluation & Attestation</h3>
-<p>L’évaluation se fera par des exercices pratiques et un mini-projet final. Une attestation de formation sera délivrée à chaque participant.</p>
-</div>
-
-<div class="card">
-<h3>8. Coût de la Formation</h3>
-<ul>
-<li>Frais d’inscription : 1 000 FCFA</li>
-<li>Frais de formation : 30 000 FCFA / mois</li>
-</ul>
-</div>
+<button class="reserve-btn" onclick="afficherInscription();">Je m'inscris</button>
 
 </section>
 
-<section>
+<!-- ================= Section inscription ================= -->
+<section id="inscription" style="display:none;">
+
 <h2>Inscription</h2>
 
 <form id="inscriptionForm" action="https://formspree.io/f/mqeddeow" method="POST">
-<input type="text" name="Nom" id="nom" placeholder="Nom complet" required>
-<input type="email" name="Email" id="email" placeholder="Email" required>
-<input type="text" name="Téléphone" id="telephone" placeholder="Téléphone" required>
 
-<select name="Mode" id="mode" required>
+<input type="text" name="nom" placeholder="Nom complet" required>
+
+<input type="email" name="email" placeholder="Email" required>
+
+<input type="text" name="telephone" placeholder="Téléphone (ex: 22797046146)" required>
+
+<select name="mode" required>
 <option value="">Mode de formation</option>
-<option>Présentiel - Niamey</option>
 <option>En ligne</option>
 </select>
 
-<textarea name="Message" id="message" placeholder="Votre message"></textarea>
+<textarea name="Vos suggestions" placeholder="Vos suggestions"></textarea>
 
 <button type="submit">S'inscrire</button>
+
 </form>
 
 <p class="success" id="successMessage">
-Inscription envoyée avec succès ! Nous vous contacterons rapidement.
+Inscription réussie ! Vérifiez votre email et WhatsApp.
 </p>
 
 </section>
@@ -198,30 +98,120 @@ Inscription envoyée avec succès ! Nous vous contacterons rapidement.
 </footer>
 
 <script>
-document.getElementById("inscriptionForm").addEventListener("submit", function(event) {
 
-let nom = document.getElementById("nom").value;
-let email = document.getElementById("email").value;
-let telephone = document.getElementById("telephone").value;
-let mode = document.getElementById("mode").value;
-let message = document.getElementById("message").value;
+// COUNTDOWN
+const countdown = document.getElementById("countdown");
 
-let texte = `Nouvelle inscription Cabinetnilab:
-Nom: ${nom}
-Email: ${email}
-Téléphone: ${telephone}
-Mode: ${mode}
-Message: ${message}`;
+const target = new Date("April 4, 2026 20:30:00").getTime();
 
-let url = "https://wa.me/22797046146?text=" + encodeURIComponent(texte);
+setInterval(function(){
 
-setTimeout(function() {
-window.open(url, "_blank");
-}, 1000);
+let now = new Date().getTime();
 
-document.getElementById("successMessage").style.display = "block";
+let diff = target - now;
+
+if(diff <= 0){
+countdown.innerHTML = "La formation a commencé";
+return;
+}
+
+let days = Math.floor(diff/(1000*60*60*24));
+let hours = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+let minutes = Math.floor((diff%(1000*60*60))/(1000*60));
+
+countdown.innerHTML = days+" jours "+hours+" h "+minutes+" min";
+
+},1000);
+
+
+// AFFICHER INSCRIPTION
+
+function afficherInscription() {
+
+const inscription = document.getElementById('inscription');
+
+if (inscription.style.display === 'none') {
+
+inscription.style.display = 'block';
+
+setTimeout(() => {
+
+inscription.scrollIntoView({ behavior: 'smooth' });
+
+}, 100);
+
+} else {
+
+inscription.scrollIntoView({ behavior: 'smooth' });
+
+}
+
+}
+
+
+// FORMSPREE + WHATSAPP
+
+document.getElementById("inscriptionForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+const form = e.target;
+
+const formData = new FormData(form);
+
+fetch(form.action, {
+
+method: form.method,
+
+body: formData,
+
+headers: { 'Accept': 'application/json' }
+
+}).then(response => {
+
+if(response.ok){
+
+// WhatsApp Admin
+
+let texteAdmin = `Nouvelle inscription Cabinetnilab :
+
+Nom : ${formData.get('nom')}
+
+Email : ${formData.get('email')}
+
+Téléphone : ${formData.get('telephone')}
+
+Mode : ${formData.get('mode')}`;
+
+window.open("https://wa.me/22797046146?text="+encodeURIComponent(texteAdmin), "_blank");
+
+
+// WhatsApp Client
+
+let texteClient = `Bonjour ${formData.get('nom')},
+
+Votre inscription est confirmée.
+
+Début : 4 Avril 2026
+
+Heure : 20h30
+
+Mode : ${formData.get('mode')}
+
+Cabinetnilab`;
+
+window.open("https://wa.me/"+formData.get('telephone')+"?text="+encodeURIComponent(texteClient), "_blank");
+
+document.getElementById("successMessage").style.display="block";
+
+form.reset();
+
+}
 
 });
+
+});
+
 </script>
 
 </body>
